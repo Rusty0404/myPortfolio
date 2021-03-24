@@ -544,6 +544,50 @@ pre {
   background-color: #3e4eb8;
 }
 
+/* instagram紫グラデ背景 */
+.insta_btn1 {
+  background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  font-size: 40px;
+}
+
+/* Twitter */
+.fl_tw1 {
+  background: #55acee;
+  font-size: 40px;
+}
+
+.git_btn1 {
+  font-size: 40px;
+}
+
+/* ボタン内テキスト調整 */
+.flowbtn div {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0;
+  position: relative;
+}
+/* ボタンマウスホバー時 */
+.flowbtn:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+/* ulタグの内側余白を０にする */
+.snsbtniti {
+  padding: 0 !important;
+}
+/* ボタン全体の位置調整 */
+.snsbtniti {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style: none;
+  width: 50%;
+}
+
 @media screen and (max-width: 767.9px) {
   /* モーダルウィンドウ スマホサイズ　*/
   .modal-wrapper {
@@ -807,6 +851,10 @@ pre {
   /* Twitter */
   .fl_tw1 {
     background: #55acee;
+    font-size: 40px;
+  }
+
+  .git_btn1 {
     font-size: 40px;
   }
 
