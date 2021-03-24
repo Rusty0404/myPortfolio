@@ -1,0 +1,839 @@
+html,
+body {
+  font-family: "Lato", "Noto Sans JP", "ヒラギノ角ゴ ProN",
+    "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+    "MS PGothic", sans-serif;
+}
+
+/* モーダルウィンドウ　*/
+.modal-wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 60px 10px;
+  text-align: center;
+}
+
+.modal-wrapper:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal-wrapper:target {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.modal-wrapper::after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  vertical-align: middle;
+  content: "";
+}
+
+.modal-wrapper .modal-window {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 9999;
+  position: relative;
+  width: 70%;
+  max-width: 600px;
+  padding: 30px 30px 15px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  vertical-align: middle;
+}
+
+.mdl-layout__content {
+  z-index: 10;
+}
+
+.modal-wrapper .modal-window .modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-overlay {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-wrapper .modal-close {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  color: #95979c !important;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+}
+
+.modal-wrapper .modal-close:hover {
+  color: #2b2e38 !important;
+}
+
+.material-icons {
+  font-size: 50px;
+  z-index: 9999;
+}
+
+.mdl-layout__drawer.is-visible {
+  background-color: rgba(86, 86, 86, 0.4);
+  z-index: 100;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+  color: #2ecc71;
+  font-size: 30px;
+  padding: 70px 10px 0;
+}
+
+/* instagram紫グラデ背景 */
+.insta_btn1 {
+  background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+}
+
+/* Twitter */
+.fl_tw1 {
+  background: #55acee;
+}
+
+/* ボタン内テキスト調整 */
+.flowbtn div {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0;
+  position: relative;
+}
+/* ボタンマウスホバー時 */
+.flowbtn:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+/* ulタグの内側余白を０にする */
+ul.snsbtniti {
+  padding: 0 !important;
+}
+/* ボタン全体の位置調整 */
+.snsbtniti {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.mdl-button--fab .material-icons {
+  left: 30%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.site-header {
+  position: relative;
+}
+
+.site-header .mdl-layout__header-row {
+  padding: 0;
+  justify-content: center;
+}
+
+.site-description {
+  display: block;
+  font-size: 75px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.is-compact .mdl-layout__title span {
+  display: none;
+}
+
+.site-logo-row {
+  min-height: 200px;
+}
+
+.is-compact .site-logo-row {
+  min-height: auto;
+}
+
+.site-navigation-row .mdl-navigation__link:hover {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #3e4eb8;
+}
+
+.site-logo {
+  background: url(../img/kazumin.jpg) 50% no-repeat;
+  background-size: cover;
+  height: 120px;
+  width: 120px;
+  margin: 15px auto;
+  border-radius: 50px;
+  position: relative;
+  top: 20px;
+}
+
+.is-compact .site-logo {
+  height: 50px;
+  width: 50px;
+  margin: 7px auto;
+}
+
+.site-navigation-row {
+  background-color: rgba(0, 0, 0, 0.08);
+  text-transform: uppercase;
+  height: 45px;
+}
+.site-navigation-row .mdl-navigation {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+.site-navigation-row .mdl-navigation__link {
+  flex: 1;
+  line-height: 42px;
+  color: #fff;
+}
+.site-navigation-row .is-active {
+  position: relative;
+  font-weight: bold;
+  opacity: 1;
+}
+.site-navigation-row .mdl-navigation__link:hover {
+  opacity: 1;
+}
+
+.mdl-layout__header .mdl-layout__drawer-button {
+  color: #fff;
+}
+
+.mdl-layout__content {
+  background-color: #fefefe;
+}
+
+.site-content {
+  margin: 1em auto;
+  min-height: 580px;
+}
+
+.page-content {
+  padding-bottom: 2em;
+}
+
+.site-max-width {
+  max-width: 900px;
+  margin: auto;
+}
+
+.site-copy {
+  max-width: 700px;
+}
+
+.welcome-card > .mdl-card__title {
+  color: #fff;
+  height: 290px;
+  background: url("../img/cover.jpg") center/cover;
+  animation: num 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes num {
+  0% {
+    opacity: 0;
+    transform: translate(60px, 60px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.event-card {
+  background: #3e4eb8;
+}
+.event-card .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.event-card .mdl-card__title {
+  align-items: flex-start;
+}
+.event-card .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.event-card .mdl-card__actions {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+.event-card .mdl-card__actions > .material-icons {
+  padding-right: 10px;
+}
+.event-card .mdl-card__title,
+.event-card .mdl-card__actions,
+.event-card .mdl-card__actions > .mdl-button {
+  color: #fff;
+}
+
+.section__play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+.section__play-btn .material-icons {
+  font-size: 3rem;
+}
+
+.section--center {
+  margin: 0 auto 2rem;
+}
+
+.homepage-portfolio .mdl-button {
+  margin: 0 auto;
+}
+
+.homepage-footer {
+  background: #eee;
+  margin-bottom: -1em;
+  padding: 2rem 0;
+}
+
+.portfolio-card .mdl-card__title {
+  padding-bottom: 0;
+}
+
+img.article-image {
+  width: 100%;
+  height: auto;
+}
+
+.demo-card-image.mdl-card {
+  width: 610px;
+  height: 580px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.mdl-card__title-text {
+  font-size: 35px;
+}
+
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-contact .mdl-textfield {
+  width: 100%;
+}
+
+#contact-button {
+  position: fixed;
+  display: block;
+  right: 0;
+  bottom: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 900;
+}
+
+footer .mdl-logo a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dotted #aaa;
+}
+
+.footer-container {
+  margin: 0 auto;
+}
+
+.mdl-card__supporting-text p {
+  font-size: 25px;
+}
+
+.mdl-card__title h2 {
+  font-size: 35px;
+}
+
+.textAnimation {
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 80px;
+}
+.textAnimation span {
+  display: inline-block;
+  animation: show 3s backwards;
+  position: relative;
+}
+.textAnimation span:nth-of-type(odd) {
+  animation: showtop 3s;
+}
+.textAnimation span:nth-of-type(even) {
+  animation: showBottom 3s;
+}
+@keyframes showtop {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  50% {
+    color: pink;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mdl-cell p {
+  white-space: nowrap;
+  font-size: 20px;
+  right: 20px;
+  width: 600px;
+}
+
+/* CSS ONLY */
+.graph-cont {
+  width: calc(100% - 40px);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.bar23 {
+  height: 30px;
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+  line-height: 30px;
+  font-size: 18px;
+  color: white;
+  padding: 0 0 0 10px;
+  position: relative;
+}
+
+.bar23::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 30px;
+  top: 0;
+  z-index: 0;
+  background: #ecf0f1;
+}
+.bar23::after {
+  content: "";
+  background: #2ecc71;
+  height: 30px;
+  transition: 0.7s;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.bar1::after {
+  max-width: 75%;
+  content: "HTML5/CSS3";
+  background: #fd7473;
+}
+.bar2::after {
+  max-width: 80%;
+  content: "JavaScript";
+  background: #9f68d0;
+}
+.bar3::after {
+  max-width: 60%;
+  content: "JQuery";
+  background: #fec951;
+}
+.bar4::after {
+  max-width: 75%;
+  content: "React";
+  background: #47b8e0;
+}
+
+.bar5::after {
+  max-width: 30%;
+  content: "Phyton";
+}
+
+.bar6::after {
+  max-width: 30%;
+  content: "SQL";
+  background: #e24e4e;
+}
+
+.bar7::after {
+  max-width: 45%;
+  content: "Node.js";
+}
+
+.bar8::after {
+  max-width: 55%;
+  content: "Firebase";
+  background: #e24ea9;
+}
+
+.bar9::after {
+  max-width: 100%;
+  content: "コミュニケーション力";
+  background: #494347;
+}
+
+.how-cont {
+  width: calc(100% - 40px);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+code {
+  padding: 5px;
+  background: #ecf0f1;
+  display: block;
+}
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+  background-color: #3e4eb8;
+}
+
+@media screen and (max-width: 767.9px) {
+  /* モーダルウィンドウ スマホサイズ　*/
+  .modal-wrapper {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 60px 10px;
+    text-align: center;
+  }
+
+  .modal-wrapper:not(:target) {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  .modal-wrapper:target {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  .modal-wrapper::after {
+    display: inline-block;
+    height: 100%;
+    margin-left: -0.05em;
+    vertical-align: middle;
+    content: "";
+  }
+
+  .modal-wrapper .modal-window {
+    box-sizing: border-box;
+    display: inline-block;
+    z-index: 9999;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px 30px 15px;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    vertical-align: middle;
+  }
+
+  .mdl-layout__content {
+    z-index: 10;
+  }
+
+  .mdl-card__supporting-text {
+    font-size: 17px;
+  }
+
+  .modal-wrapper .modal-window .modal-content {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .modal-overlay {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .modal-wrapper .modal-close {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    color: #95979c !important;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0;
+  }
+
+  .modal-wrapper .modal-close:hover {
+    color: #2b2e38 !important;
+  }
+
+  .demo-card-image.mdl-card {
+    width: 350px;
+    height: 750px;
+    display: block;
+    font-size: 19px;
+    font-weight: 800;
+    position: relative;
+    right: 20px;
+  }
+
+  /* CSS ONLY */
+  .graph-cont {
+    width: calc(100% - 40px);
+    width: 100%;
+    max-width: 630px;
+    margin: 0 auto;
+  }
+  .bar23 {
+    height: 30px;
+    max-width: 630px;
+    margin: 0 auto 10px auto;
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
+    padding: 0 0 0 10px;
+    position: relative;
+  }
+
+  .bar23::before {
+    content: "";
+    width: 55%;
+    position: absolute;
+    left: 0;
+    height: 30px;
+    top: 0;
+    z-index: 0;
+    background: #ecf0f1;
+  }
+  .bar23::after {
+    content: "";
+    background: #2ecc71;
+    height: 30px;
+    transition: 0.7s;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .bar1::after {
+    max-width: 40%;
+    content: "HTML5/CSS3";
+    background: #fd7473;
+  }
+  .bar2::after {
+    max-width: 45%;
+    content: "JavaScript";
+    background: #9f68d0;
+  }
+  .bar3::after {
+    max-width: 33%;
+    content: "JQuery";
+    background: #fec951;
+  }
+  .bar4::after {
+    max-width: 40%;
+    content: "React";
+    background: #47b8e0;
+  }
+
+  .bar5::after {
+    max-width: 20%;
+    content: "Phyton";
+  }
+
+  .bar6::after {
+    max-width: 20%;
+    content: "SQL";
+    background: #e24e4e;
+  }
+
+  .bar7::after {
+    max-width: 30%;
+    content: "Node.js";
+  }
+
+  .bar8::after {
+    max-width: 35%;
+    content: "Firebase";
+    background: #e24ea9;
+  }
+
+  .bar9::after {
+    max-width: 60%;
+    content: "コミュニケーション力";
+    background: #494347;
+  }
+
+  .site-description {
+    font-size: 40px;
+  }
+  .textAnimation {
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+  .textAnimation span {
+    display: inline-block;
+    animation: show 3s backwards;
+    position: relative;
+  }
+  .textAnimation span:nth-of-type(odd) {
+    animation: showtop 3s;
+  }
+  .textAnimation span:nth-of-type(even) {
+    animation: showBottom 3s;
+  }
+  @keyframes showtop {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    50% {
+      color: black;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes showBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    50% {
+      color: pink;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .is-compact .site-logo {
+    background: url(../img/kazumin.jpg) 30% no-repeat;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    margin: 10px auto;
+    border-radius: 50px;
+    position: relative;
+  }
+
+  .mdl-cell p {
+    white-space: nowrap;
+    font-size: 16px;
+    right: 18px;
+    width: 600px;
+    position: relative;
+  }
+
+  /* instagram紫グラデ背景 */
+  .insta_btn1 {
+    background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
+      no-repeat;
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    font-size: 40px;
+  }
+
+  /* Twitter */
+  .fl_tw1 {
+    background: #55acee;
+    font-size: 40px;
+  }
+
+  /* ボタン内テキスト調整 */
+  .flowbtn div {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0;
+    position: relative;
+  }
+  /* ボタンマウスホバー時 */
+  .flowbtn:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    text-decoration: none;
+  }
+  /* ulタグの内側余白を０にする */
+  .snsbtniti {
+    padding: 0 !important;
+  }
+  /* ボタン全体の位置調整 */
+  .snsbtniti {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style: none;
+    width: 50%;
+  }
+}
