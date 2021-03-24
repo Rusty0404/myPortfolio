@@ -857,7 +857,7 @@ pre {
   }
 
   .git_btn1 {
-    font-size: 50px;
+    font-size: 60px;
     background: #2b2e38;
   }
 
@@ -886,5 +886,10 @@ pre {
     justify-content: space-around;
     list-style: none;
     width: 60%;
+  }
+
+  .mdl-button {
+    background-color: #3e4eb8;
+    color: #ecf0f1;
   }
 }
