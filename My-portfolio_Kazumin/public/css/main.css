@@ -549,6 +549,7 @@ pre {
   background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
   background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
   font-size: 40px;
+  color: #fff;
 }
 
 /* Twitter */
@@ -556,9 +557,9 @@ pre {
   background: #55acee;
   font-size: 40px;
 }
-
+/* Github */
 .git_btn1 {
-  font-size: 40px;
+  font-size: 60px;
 }
 
 /* ボタン内テキスト調整 */
@@ -585,7 +586,7 @@ pre {
   flex-flow: row wrap;
   justify-content: space-around;
   list-style: none;
-  width: 50%;
+  width: 60%;
 }
 
 @media screen and (max-width: 767.9px) {
@@ -846,6 +847,7 @@ pre {
       no-repeat;
     background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
     font-size: 40px;
+    color: #fff;
   }
 
   /* Twitter */
@@ -855,7 +857,8 @@ pre {
   }
 
   .git_btn1 {
-    font-size: 40px;
+    font-size: 50px;
+    background: #2b2e38;
   }
 
   /* ボタン内テキスト調整 */
@@ -882,6 +885,6 @@ pre {
     flex-flow: row wrap;
     justify-content: space-around;
     list-style: none;
-    width: 50%;
+    width: 60%;
   }
 }
